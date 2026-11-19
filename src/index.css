@@ -1,0 +1,49 @@
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #111111;
+  --accent: #F5A623;
+  --gold: #FFD700;
+  --gold-glow: rgba(255, 215, 0, 0.4);
+  --text-primary: #F5F3ED;
+  --text-secondary: #A5A69E;
+  --font-en: 'Manrope', sans-serif;
+  --font-ta: 'Noto Sans Tamil', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-ta);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+html[lang="en"] body { font-family: var(--font-en); }
+
+/* ANIMATED GLOBAL BACKGROUND: slow pan/zoom image + dark overlay + drifting glows */
+.bg-anim { position: fixed; inset: 0; z-index: -2; overflow: hidden; background: var(--bg-primary); }
+.bg-anim .bg-img {
+  position: absolute; inset: -6%;
+  background: url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=2000') center/cover;
+  animation: kenburns 40s ease-in-out infinite alternate;
+  filter: saturate(1.1);
+}
+.bg-anim .bg-shade { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 30%, rgba(10,10,10,0.78), rgba(8,8,8,0.94) 75%); }
+.bg-anim .orb { position: absolute; border-radius: 50%; filter: blur(100px); opacity: .22; background: var(--accent); }
+.bg-anim .o1 { width: 420px; height: 420px; top: -80px; left: -80px; animation: drift1 22s ease-in-out infinite alternate; }
+.bg-anim .o2 { width: 360px; height: 360px; bottom: -60px; right: -60px; background: var(--gold); animation: drift2 26s ease-in-out infinite alternate; }
+@keyframes kenburns { from { transform: scale(1) translate(0,0); } to { transform: scale(1.12) translate(-2%, -2%); } }
+@keyframes drift1 { to { transform: translate(40vw, 30vh); } }
+@keyframes drift2 { to { transform: translate(-35vw, -25vh); } }
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; outline: none; font-family: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+::selection { background: var(--gold); color: #000; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

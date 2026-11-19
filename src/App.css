@@ -1,0 +1,3 @@
+/* Shared utilities (all CSS variables are defined in index.css) */
+.wrap { width: min(1200px, 92%); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
