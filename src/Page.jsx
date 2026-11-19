@@ -165,9 +165,9 @@ const vehicles = [
 
 const team = [
   { id: 1, name: "AYYAVOO S", roleKey: "owner", phone: "+91 73393 29250", email: "ayyavoo19@gmail.com", qual: "", img: "ayyavoo.jpeg?auto=format&fit=crop&w=600" },
-  { id: 2, name: "KALPANA C", roleKey: "ownerFunding", phone: "+91 97872 26726", email: "", qual: "", img: "kalpana.jpeg?auto=format&fit=crop&w=600" },
-  { id: 3, name: "MONIKA A", roleKey: "marketing", phone: "+91 88381 98069", email: "monikaayyavoo58@gmail.com", qual: "MCA", img: "moni.jpeg?auto=format&fit=crop&w=600" },
-  { id: 4, name: "KISHORE A", roleKey: "md", phone: "+91 94868 02976", email: "kishoremonika87@gmail.com", qual: "B.E. (Founder of Eemon X)", frontInfo: "Founder of Eemon X", img: "kalash.jpeg?auto=format&fit=crop&w=600" }
+  { id: 2, name: "KALPANA C", roleKey: "ownerFunding", phone: "+91 97872 26726", email: "", qual: "", img: "kalpana1.jpeg?auto=format&fit=crop&w=600" },
+  { id: 3, name: "MONIKA A", roleKey: "marketing", phone: "+91 88381 98069", email: "monikaayyavoo58@gmail.com", qual: "MCA", img: "moni1.jpeg?auto=format&fit=crop&w=600" },
+  { id: 4, name: "KISHORE A", roleKey: "md", phone: "+91 94868 02976", email: "kishoremonika87@gmail.com", qual: "B.E. (Founder of Eemon X)", frontInfo: "Founder of Eemon X", img: "kalash1.jpeg?auto=format&fit=crop&w=600" }
 ];
 
 export default function Page() {
